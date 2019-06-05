@@ -1,13 +1,13 @@
 EESchema Schematic File Version 4
-LIBS:feather-cache
+LIBS:efr32_feather-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "EFR32 Feather"
+Date "2019-06-05"
+Rev "0.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -284,13 +284,13 @@ NoConn ~ 2750 1200
 Wire Wire Line
 	6925 3825 6675 3825
 Wire Wire Line
-	7725 2225 7725 1975
+	7925 2225 7925 1975
 Wire Wire Line
-	7625 2225 7625 1975
+	9025 3025 9275 3025
 Wire Wire Line
-	7525 2225 7525 1975
+	9025 3125 9275 3125
 Wire Wire Line
-	7425 2225 7425 1975
+	9025 3225 9275 3225
 Text Label 6675 3825 2    50   ~ 0
 NRESET
 $Comp
@@ -349,13 +349,13 @@ F 3 "" H 6100 2750 50  0001 C CNN
 	1    6100 2750
 	1    0    0    -1  
 $EndComp
-Text Label 7725 1975 1    50   ~ 0
+Text Label 7925 1975 1    50   ~ 0
 D17_A3
-Text Label 7625 1975 1    50   ~ 0
+Text Label 9275 3025 0    50   ~ 0
 D16_A2
-Text Label 7525 1975 1    50   ~ 0
+Text Label 9275 3125 0    50   ~ 0
 D15_A1
-Text Label 7425 1975 1    50   ~ 0
+Text Label 9275 3225 0    50   ~ 0
 D14_A0
 $Comp
 L Anders_SiLabs_EFR32:EFR32BG_QFN48 U1
@@ -744,26 +744,26 @@ Wire Wire Line
 Text Label 6675 2825 2    50   ~ 0
 SWDIO
 NoConn ~ 1225 1175
-Text Label 9275 3325 0    50   ~ 0
+Text Label 7425 1975 1    50   ~ 0
 D22_MISO
-Text Label 7925 1975 1    50   ~ 0
+Text Label 7525 1975 1    50   ~ 0
 D23_MOSI
-Text Label 7825 1975 1    50   ~ 0
+Text Label 7625 1975 1    50   ~ 0
 D24_SCK
-Text Label 9275 3225 0    50   ~ 0
+Text Label 7725 1975 1    50   ~ 0
 D19_A5
-Text Label 9275 3125 0    50   ~ 0
+Text Label 7825 1975 1    50   ~ 0
 D18_A4
 Wire Wire Line
-	9025 3325 9275 3325
+	7425 2225 7425 1975
 Wire Wire Line
-	7925 2225 7925 1975
+	7525 2225 7525 1975
+Wire Wire Line
+	7625 2225 7625 1975
+Wire Wire Line
+	7725 2225 7725 1975
 Wire Wire Line
 	7825 2225 7825 1975
-Wire Wire Line
-	9025 3225 9275 3225
-Wire Wire Line
-	9025 3125 9275 3125
 $Comp
 L Device:Crystal_Small Y1
 U 1 1 5D139E47
@@ -1046,12 +1046,12 @@ Wire Wire Line
 Text Label 10300 5700 0    50   ~ 0
 SWDIO
 Wire Wire Line
-	9025 3525 9275 3525
+	6925 3125 6675 3125
 Wire Wire Line
-	9025 3425 9275 3425
-Text Label 9275 3425 0    50   ~ 0
+	6925 3225 6675 3225
+Text Label 6675 3125 2    50   ~ 0
 D0_RX
-Text Label 9275 3525 0    50   ~ 0
+Text Label 6675 3225 2    50   ~ 0
 D1_TX
 Text Label 9275 3625 0    50   ~ 0
 D13
@@ -1113,7 +1113,7 @@ U 1 1 5D30674C
 P 6925 4825
 F 0 "L1" V 7110 4825 50  0000 C CNN
 F 1 "1.9nH" V 7019 4825 50  0000 C CNN
-F 2 "Inductor_SMD:L_0603_1608Metric" H 6925 4825 50  0001 C CNN
+F 2 "Inductor_SMD:L_0402_1005Metric" H 6925 4825 50  0001 C CNN
 F 3 "~" H 6925 4825 50  0001 C CNN
 	1    6925 4825
 	0    -1   -1   0   
@@ -1124,7 +1124,7 @@ U 1 1 5D306EBF
 P 6700 5000
 F 0 "C9" H 6700 5075 50  0000 L CNN
 F 1 "1.5pF" H 6700 4925 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6700 5000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6700 5000 50  0001 C CNN
 F 3 "~" H 6700 5000 50  0001 C CNN
 	1    6700 5000
 	1    0    0    -1  
@@ -1235,17 +1235,6 @@ NoConn ~ 3500 4500
 NoConn ~ 3500 4600
 NoConn ~ 3500 4700
 $Comp
-L Anders_ICs:CP2102N-A01-GQFN20 U4
-U 1 1 5CFBDE61
-P 2900 4100
-F 0 "U4" H 2975 5025 50  0000 C CNN
-F 1 "CP2102N-A01-GQFN20" H 3375 4925 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.5x2.5mm" H 3350 3300 50  0001 L CNN
-F 3 "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" H 2950 3050 50  0001 C CNN
-	1    2900 4100
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3.3V #PWR0124
 U 1 1 5CFC102A
 P 2800 2775
@@ -1287,7 +1276,6 @@ Wire Wire Line
 Wire Wire Line
 	1925 2975 1925 4100
 Connection ~ 2125 2975
-NoConn ~ 2300 3700
 NoConn ~ 2300 3800
 NoConn ~ 2300 3900
 Wire Wire Line
@@ -1313,4 +1301,118 @@ Text Notes 2175 5750 0    50   ~ 0
 POWER: 3.3V
 Text Notes 2900 2925 0    50   ~ 0
 USB UART
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5CF736DB
+P 5850 1500
+F 0 "SW1" H 5850 1785 50  0000 C CNN
+F 1 "RESET" H 5850 1694 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 5850 1700 50  0001 C CNN
+F 3 "~" H 5850 1700 50  0001 C CNN
+	1    5850 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 1500 5400 1500
+Text Label 5400 1500 2    50   ~ 0
+NRESET
+$Comp
+L power:GND #PWR0125
+U 1 1 5CF80DD4
+P 6250 1650
+F 0 "#PWR0125" H 6250 1400 50  0001 C CNN
+F 1 "GND" H 6255 1477 50  0000 C CNN
+F 2 "" H 6250 1650 50  0001 C CNN
+F 3 "" H 6250 1650 50  0001 C CNN
+	1    6250 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 1500 6250 1500
+Wire Wire Line
+	6250 1500 6250 1650
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5CFB6ACB
+P 6675 3325
+F 0 "TP1" V 6700 3350 50  0000 C CNN
+F 1 "PF6" V 6700 3575 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6875 3325 50  0001 C CNN
+F 3 "~" H 6875 3325 50  0001 C CNN
+	1    6675 3325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5CFB7ECE
+P 6675 3425
+F 0 "TP2" V 6700 3450 50  0000 C CNN
+F 1 "PF7" V 6700 3675 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6875 3425 50  0001 C CNN
+F 3 "~" H 6875 3425 50  0001 C CNN
+	1    6675 3425
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6925 3425 6675 3425
+Wire Wire Line
+	6925 3325 6675 3325
+$Comp
+L Interface_USB:CP2102N-A01-GQFN24 U4
+U 1 1 5D094E59
+P 2900 4100
+F 0 "U4" H 2625 3250 50  0000 C CNN
+F 1 "CP2102N-A01-GQFN24" H 3500 3250 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 3350 3300 50  0001 L CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" H 2950 3050 50  0001 C CNN
+	1    2900 4100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3500 4000
+NoConn ~ 3500 4100
+NoConn ~ 3500 4200
+NoConn ~ 3500 3500
+Wire Wire Line
+	2900 3200 2900 2975
+Wire Wire Line
+	2900 2975 2800 2975
+Wire Wire Line
+	9025 3325 9275 3325
+Wire Wire Line
+	9025 3425 9275 3425
+Wire Wire Line
+	9025 3525 9275 3525
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5D10F8A7
+P 9275 3325
+F 0 "TP3" V 9250 3250 50  0000 L CNN
+F 1 "PA5" V 9250 3500 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9475 3325 50  0001 C CNN
+F 3 "~" H 9475 3325 50  0001 C CNN
+	1    9275 3325
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5D10FBDD
+P 9275 3425
+F 0 "TP4" V 9250 3350 50  0000 L CNN
+F 1 "PA4" V 9250 3600 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9475 3425 50  0001 C CNN
+F 3 "~" H 9475 3425 50  0001 C CNN
+	1    9275 3425
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5D10FFE8
+P 9275 3525
+F 0 "TP5" V 9250 3450 50  0000 L CNN
+F 1 "PA3" V 9250 3700 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9475 3525 50  0001 C CNN
+F 3 "~" H 9475 3525 50  0001 C CNN
+	1    9275 3525
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
