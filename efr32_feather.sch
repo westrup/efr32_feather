@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "EFR32 Feather"
-Date "2019-06-05"
-Rev "0.1"
+Date "2019-06-06"
+Rev "0.2"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -358,7 +358,7 @@ D15_A1
 Text Label 9275 3225 0    50   ~ 0
 D14_A0
 $Comp
-L Anders_SiLabs_EFR32:EFR32BG_QFN48 U1
+L efr32_feather-rescue:EFR32BG_QFN48-Anders_SiLabs_EFR32 U1
 U 1 1 5CECF271
 P 7975 3275
 F 0 "U1" H 8750 2175 60  0000 L CNN
