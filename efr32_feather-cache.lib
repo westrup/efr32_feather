@@ -446,6 +446,43 @@ X ~RSTb 9 -600 600 150 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
+# Power_Protection_TPD2EUSB30
+#
+DEF Power_Protection_TPD2EUSB30 U 0 0 Y Y 1 F N
+F0 "U" 0 250 50 H V C CNN
+F1 "Power_Protection_TPD2EUSB30" 300 -300 50 H V C CNN
+F2 "Package_TO_SOT_SMD:Texas_DRT-3" -750 -300 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+ALIAS TPD2EUSB30A
+$FPLIST
+ Texas*DRT*
+$ENDFPLIST
+DRAW
+C -125 0 11 0 1 0 F
+C 0 -150 11 0 1 0 F
+C 0 150 11 0 1 0 F
+C 125 0 11 0 1 0 F
+S -200 200 200 -200 0 1 10 f
+S -125 150 125 -150 0 1 0 N
+P 2 0 1 0 -200 0 -125 0 N
+P 2 0 1 0 -150 -50 -100 -50 N
+P 2 0 1 0 -150 100 -100 100 N
+P 2 0 1 0 0 150 0 -200 N
+P 2 0 1 0 100 -50 150 -50 N
+P 2 0 1 0 100 100 150 100 N
+P 2 0 1 0 200 0 125 0 N
+P 3 0 1 0 30 30 -30 30 -30 20 N
+P 4 0 1 0 -100 -100 -150 -100 -125 -50 -100 -100 N
+P 4 0 1 0 -100 50 -150 50 -125 100 -100 50 N
+P 4 0 1 0 25 -20 -25 -20 0 30 25 -20 N
+P 4 0 1 0 150 -100 100 -100 125 -50 150 -100 N
+P 4 0 1 0 150 50 100 50 125 100 150 50 N
+X D+ 1 -400 0 200 R 50 50 1 1 P
+X D- 2 400 0 200 L 50 50 1 1 P
+X GND 3 0 -400 200 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Regulator_Linear_AP2112K-3.3
 #
 DEF Regulator_Linear_AP2112K-3.3 U 0 10 Y Y 1 F N
@@ -520,11 +557,11 @@ X D 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# efr32_feather-rescue_EFR32BG_QFN48-Anders_SiLabs_EFR32
+# efr32_feather-rescue_EFR32BG_QFN48-Anders_SiLabs_EFR32-efr32_feather-rescue
 #
-DEF efr32_feather-rescue_EFR32BG_QFN48-Anders_SiLabs_EFR32 U 0 40 Y Y 1 F N
+DEF efr32_feather-rescue_EFR32BG_QFN48-Anders_SiLabs_EFR32-efr32_feather-rescue U 0 40 Y Y 1 F N
 F0 "U" -950 1050 60 H V C CNN
-F1 "efr32_feather-rescue_EFR32BG_QFN48-Anders_SiLabs_EFR32" 0 0 60 H V C CNN
+F1 "efr32_feather-rescue_EFR32BG_QFN48-Anders_SiLabs_EFR32-efr32_feather-rescue" 0 0 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
