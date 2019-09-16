@@ -1,0 +1,78 @@
+/*
+ * Copyright (c) 2018 Diego Sueiro
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/dts-v1/;
+#include <silabs/efr32fg1p133f256gm48.dtsi>
+
+/ {
+	model = "Silabs EFR32MG SLTB004A board (aka Thunderboard Sense 2)";
+	compatible = "silabs,efr32_feather", "silabs,efr32fg1p";
+
+	aliases {
+		led0 = &led0;
+		led1 = &led1;
+		sw0 = &button0;
+		sw1 = &button1;
+	};
+
+	chosen {
+		zephyr,console = &usart0;
+		zephyr,shell-uart = &usart0;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		led0: led_0 {
+			gpios = <&gpiod 12 0>;
+			label = "LED 0";
+		};
+		led1: led_1 {
+			gpios = <&gpioa 0 0>;
+			label = "LED 1";
+		};
+	};
+
+	buttons {
+		compatible = "gpio-keys";
+		button0: button_0 {
+			/* gpio flags need validation */
+			gpios = <&gpiod 14 GPIO_INT_ACTIVE_LOW>;
+			label = "User Push Button 0";
+		};
+		button1: button_1 {
+			/* gpio flags need validation */
+			gpios = <&gpiod 15 GPIO_INT_ACTIVE_LOW>;
+			label = "User Push Button 1";
+		};
+	};
+};
+
+&usart0 {
+	current-speed = <115200>;
+	location-rx = <GECKO_LOCATION(26) GECKO_PORT_F GECKO_PIN(3)>;
+	location-tx = <GECKO_LOCATION(26) GECKO_PORT_F GECKO_PIN(2)>;
+	status = "ok";
+};
+
+&usart1 {
+	current-speed = <115200>;
+	location-rx = <GECKO_LOCATION(27) GECKO_PORT_F GECKO_PIN(4)>;
+	location-tx = <GECKO_LOCATION(29) GECKO_PORT_F GECKO_PIN(5)>;
+	status = "ok";
+};
+
+&i2c0 {
+	location-sda = <GECKO_LOCATION(18) GECKO_PORT_D GECKO_PIN(10)>;
+	location-scl = <GECKO_LOCATION(18) GECKO_PORT_D GECKO_PIN(11)>;
+	status = "ok";
+};
+
+&gpio {
+	location-swo = <0>;
+	status = "ok";
+};

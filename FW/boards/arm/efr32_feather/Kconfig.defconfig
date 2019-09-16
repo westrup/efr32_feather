@@ -1,0 +1,32 @@
+# Kconfig - EFR32 FEATHER board
+#
+# Copyright (c) 2018, Diego Sueiro
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+if BOARD_EFR32_FEATHER
+
+config BOARD
+	default "efr32_feather"
+
+config CMU_HFXO_FREQ
+	default 38400000
+
+config CMU_LFXO_FREQ
+	default 32768
+
+if GPIO_GECKO
+
+config GPIO_GECKO_PORTA
+	default y
+
+config GPIO_GECKO_PORTD
+	default y
+
+config GPIO_GECKO_PORTF
+	default y
+
+endif # GPIO_GECKO
+
+endif # BOARD_EFR32_FEATHER

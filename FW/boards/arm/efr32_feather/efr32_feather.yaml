@@ -1,0 +1,14 @@
+identifier: efr32_feather
+name: EFR32-FEATHER
+type: mcu
+arch: arm
+ram: 64
+flash: 512
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+testing:
+  ignore_tags:
+    - net
+    - bluetooth

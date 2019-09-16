@@ -1,0 +1,12 @@
+# Kconfig - EFR32 FEATHER board
+#
+# Copyright (c) 2018, Diego Sueiro
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config BOARD_EFR32_FEATHER
+	bool "SiLabs EFR32-FEATHER (Thunderboard Sense 2)"
+	depends on SOC_SERIES_EFR32FG1P
+	select SOC_PART_NUMBER_EFR32FG1P133F256GM48
+	select HAS_DTS_I2C
